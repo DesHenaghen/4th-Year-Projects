@@ -25,8 +25,6 @@ public class ExtendsConcreteTypeChecker {
     }
 
     public void listClassesExtendConcrete(){
-        //int i = 0;
-
         for (Map.Entry<String, NodeList<ClassOrInterfaceType>> entry : extendingClasses.entrySet()) {
             String key = entry.getKey();
             NodeList<ClassOrInterfaceType> types = entry.getValue();
@@ -37,10 +35,8 @@ public class ExtendsConcreteTypeChecker {
                     System.out.println("Class Name: "+key);
                     System.out.println("Extended Concrete Class: "+className);
                     System.out.println();
-                    //i++;
                 }
             }
         }
-        //System.out.println("TOTAL: "+i);
     }
 }

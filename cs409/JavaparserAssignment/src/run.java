@@ -2,7 +2,6 @@ import Adapter.AdapterChecker;
 import Adapter.AdapterDetector;
 import Adapter.RootAdapterChecker;
 import Composite.CompositeChecker;
-import Composite.CompositeCheckerOld;
 import Composite.CompositeDetector;
 import Composite.RootCompositeChecker;
 import ExtendsConcreteType.ExtendsConcreteTypeDetector;
@@ -13,7 +12,6 @@ import ExtendsConcreteType.ExtendsConcreteTypeChecker;
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.visitor.VoidVisitor;
-
 
 import java.io.File;
 import java.io.FileInputStream;

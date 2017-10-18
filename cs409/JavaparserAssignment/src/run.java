@@ -2,7 +2,9 @@ import Adapter.AdapterChecker;
 import Adapter.AdapterDetector;
 import Adapter.RootAdapterChecker;
 import Composite.CompositeChecker;
+import Composite.CompositeCheckerOld;
 import Composite.CompositeDetector;
+import Composite.RootCompositeChecker;
 import ExtendsConcreteType.ExtendsConcreteTypeDetector;
 import Singleton.RootSingletonChecker;
 import Singleton.SingletonChecker;
@@ -53,8 +55,8 @@ public class run {
      * @param projectDir - Path to the directory or file to process
      */
     public static void listComposites(File projectDir) {
-        // Root Composite.CompositeChecker
-        CompositeChecker cc = new CompositeChecker();
+        // Root Composite.CompositeCheckerOld
+        CompositeChecker cc = new RootCompositeChecker();
 
         // Explore the directory structure parsing any java files found and checking for Singletons
         new DirExplorer((level, path, file) -> path.endsWith(".java"), (level, path, file) -> {
@@ -135,11 +137,11 @@ public class run {
 
     public static void listAll(File projectDir) {
         ExtendsConcreteTypeChecker ec = new ExtendsConcreteTypeChecker();
-        CompositeChecker cc = new CompositeChecker();
+        CompositeChecker cc = new RootCompositeChecker();
         SingletonChecker sc = new RootSingletonChecker();
         AdapterChecker ac = new RootAdapterChecker();
 
-        // Explore the directory structure parsing any java files found and checking for Singletons
+        // Explore the directory structure parsing any java files found and checking for patterns
         new DirExplorer((level, path, file) -> path.endsWith(".java"), (level, path, file) -> {
             //System.out.println(path);
             try {

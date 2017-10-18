@@ -18,10 +18,10 @@ public class CompositeDetector extends VoidVisitorAdapter<CompositeChecker> {
         CompositeChecker cc = cch.addClass(coi.getNameAsString());
         // Add all extended and implemented classes
         for (ClassOrInterfaceType c  : coi.getExtendedTypes()) {
-            cc.extended.add(c.getNameAsString());
+            cc.getExtended().add(c.getNameAsString());
         }
         for (ClassOrInterfaceType c  : coi.getImplementedTypes()) {
-            cc.extended.add(c.getNameAsString());
+            cc.getExtended().add(c.getNameAsString());
         }
 
         super.visit(coi, cc);
@@ -35,7 +35,7 @@ public class CompositeDetector extends VoidVisitorAdapter<CompositeChecker> {
      */
     @Override
     public void visit(MethodDeclaration m, CompositeChecker cc) {
-        cc.currentMethod = m;
+        cc.setCurrentMethod(m);
 
         super.visit(m, cc);
     }
@@ -48,14 +48,14 @@ public class CompositeDetector extends VoidVisitorAdapter<CompositeChecker> {
      */
     @Override
     public void visit(FieldDeclaration f, CompositeChecker cc) {
-        cc.fields.add(f);
+        cc.getFields().add(f);
 
         super.visit(f, cc);
     }
 
     @Override
     public void visit(ExpressionStmt e, CompositeChecker cc) {
-        cc.currentExpression = e;
+        cc.setCurrentExpression(e);
 
         super.visit(e, cc);
     }
@@ -63,19 +63,19 @@ public class CompositeDetector extends VoidVisitorAdapter<CompositeChecker> {
     @Override
     public void visit(MethodCallExpr m, CompositeChecker cc) {
             for(com.github.javaparser.ast.expr.Expression e : m.getArguments()) {
-                if (cc.currentExpression != null && cc.currentMethod != null) {
-                    for (Parameter p : cc.currentMethod.getParameters()) {
+                if (cc.getCurrentExpression() != null && cc.getCurrentMethod() != null) {
+                    for (Parameter p : cc.getCurrentMethod().getParameters()) {
                         if (p.getNameAsString().equals(e.toString())) {
 //                            System.out.println("BINGO");
 //                            System.out.print("CLASS: " + cc.getClassName());
 //                            System.out.print("\nMETHOD: " + cc.currentMethod.getDeclarationAsString());
 //                            System.out.print("\nexpression: " + cc.currentExpression.toString());
 //                            System.out.println("\nvariable: " + e);
-                            cc.applicableMethods.add(cc.currentMethod);
+                            cc.getApplicableMethods().add(cc.getCurrentMethod());
 
                             // If current method is null, no more processing of the expressions in this method
                             // will take place
-                            cc.currentMethod = null;
+                            cc.setCurrentMethod(null);
                         }
                     }
                 }

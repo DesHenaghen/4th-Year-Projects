@@ -1,3 +1,5 @@
+package Composite;
+
 import com.github.javaparser.ast.body.*;
 import com.github.javaparser.ast.expr.MethodCallExpr;
 import com.github.javaparser.ast.stmt.ExpressionStmt;
@@ -7,7 +9,7 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 public class CompositeDetector extends VoidVisitorAdapter<CompositeChecker> {
 
     /**
-     * Adds a CompositeChecker to the root CompositeChecker object for the current class
+     * Adds a Composite.CompositeChecker to the root Composite.CompositeChecker object for the current class
      * @param coi
      * @param cch
      */
@@ -27,7 +29,7 @@ public class CompositeDetector extends VoidVisitorAdapter<CompositeChecker> {
 
     /**
      * If MethodDeclaration has a static modifier and has a type that matches the current class, marks the static method
-     * as being found in the CompositeChecker for this class
+     * as being found in the Composite.CompositeChecker for this class
      * @param m
      * @param cc
      */
@@ -40,7 +42,7 @@ public class CompositeDetector extends VoidVisitorAdapter<CompositeChecker> {
 
     /**
      * If the FieldDeclaration declares a variable of the same type as the current class, marks the static field as
-     * being found in the CompositeChecker
+     * being found in the Composite.CompositeChecker
      * @param f
      * @param cc
      */

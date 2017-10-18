@@ -1,15 +1,14 @@
-import com.github.javaparser.ast.Modifier;
+package ExtendsConcreteType;
+
 import com.github.javaparser.ast.NodeList;
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
 import com.github.javaparser.ast.type.ClassOrInterfaceType;
 import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 
-import java.util.Map;
-
 public class ExtendsConcreteTypeDetector extends VoidVisitorAdapter<ExtendsConcreteTypeChecker>{
 
     /**
-     * Adds a SingletonChecker to the root SingletonChecker object for the current class
+     * Adds a Singleton.SingletonCheckerOld to the root Singleton.SingletonCheckerOld object for the current class
      * @param n
      * @param arg
      */

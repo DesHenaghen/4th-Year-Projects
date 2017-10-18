@@ -1,6 +1,5 @@
 package Adapter;
 
-import Adapter.AdapterChecker;
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.body.VariableDeclarator;
 import com.github.javaparser.ast.type.ClassOrInterfaceType;
@@ -29,11 +28,6 @@ public class ClassAdapterChecker implements AdapterChecker {
     }
 
     @Override
-    public boolean isRoot() {
-        return false;
-    }
-
-    @Override
     public String getClassName() {
         return className;
     }
@@ -46,11 +40,6 @@ public class ClassAdapterChecker implements AdapterChecker {
     @Override
     public AdapterChecker addInterface(String name) {
         return root.addInterface(name);
-    }
-
-    @Override
-    public boolean isInterface() {
-        return false;
     }
 
     @Override

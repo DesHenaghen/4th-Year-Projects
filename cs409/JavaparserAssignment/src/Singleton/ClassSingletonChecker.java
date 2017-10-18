@@ -1,13 +1,12 @@
+package Singleton;
+
 import com.github.javaparser.ast.body.FieldDeclaration;
 import com.github.javaparser.ast.body.MethodDeclaration;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SingletonChecker {
-    // List of all SingletonCheckers created (one for each class)
-    List<SingletonChecker> classes = null;
-
+public class ClassSingletonChecker implements SingletonChecker{
     // Field fields
     private boolean staticInstanceField = false;
     private String fieldDeclaration = null;
@@ -24,31 +23,25 @@ public class SingletonChecker {
      * Constructor for a Singleton Checker of a specified class
      *
      * @param name - Name of the class
-     * @param s - SingletonChecker passed into visitor
+     * @param s - Singleton.SingletonCheckerOld passed into visitor
      */
-    public SingletonChecker(String name, SingletonChecker s) {
+    public ClassSingletonChecker(String name, SingletonChecker s) {
         className = name;
         root = s.getRoot();
     }
 
     /**
-     * Constructor for the root SingletonChecker
-     */
-    public SingletonChecker(){
-        classes = new ArrayList<>();
-        root = this;
-    }
-
-    /**
      * @return - The name of the class
      */
+    @Override
     public String getClassName() {
         return className;
     }
 
     /**
-     * @return - The SingletonChecker instance that is the root object
+     * @return - The Singleton.SingletonCheckerOld instance that is the root object
      */
+    @Override
     public SingletonChecker getRoot() {
         return root;
     }
@@ -57,6 +50,7 @@ public class SingletonChecker {
      * Marks the static instance field as being found
      * @param f - The static instance field declaration
      */
+    @Override
     public void foundStaticInstanceField(FieldDeclaration f){
         staticInstanceField = true;
         fieldDeclaration = f.toString();
@@ -66,6 +60,7 @@ public class SingletonChecker {
      *
      * @param m
      */
+    @Override
     public void foundStaticInstanceMethod(MethodDeclaration m) {
         staticInstanceMethod = true;
         methodDeclaration = m.getDeclarationAsString();
@@ -76,6 +71,7 @@ public class SingletonChecker {
      * Does so by checking if both a static instance get method & a static instance field declarator were found.
      * If so, prints the details of the class.
      */
+    @Override
     public void isSingleton() {
         if (staticInstanceMethod && staticInstanceField) {
             System.out.println("Class Name: "+className);
@@ -86,15 +82,20 @@ public class SingletonChecker {
     }
 
     /**
-     * Adds a SingletonChecker for the specified class to the list of classes
+     * Adds a Singleton.SingletonCheckerOld for the specified class to the list of classes
      * @param name
      * @return
      */
-    public SingletonChecker addClass(String name){
-        SingletonChecker sc = new SingletonChecker(name, this);
-        root.classes.add(sc);
+    public ClassSingletonChecker addClass(String name){
+        ClassSingletonChecker sc = new ClassSingletonChecker(name, this);
+        root.getClasses().add(sc);
 
         return sc;
+    }
+
+    @Override
+    public List<SingletonChecker> getClasses() {
+        return root.getClasses();
     }
 
     @Override

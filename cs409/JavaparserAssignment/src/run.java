@@ -1,6 +1,13 @@
 import Adapter.AdapterChecker;
 import Adapter.AdapterDetector;
 import Adapter.RootAdapterChecker;
+import Composite.CompositeChecker;
+import Composite.CompositeDetector;
+import ExtendsConcreteType.ExtendsConcreteTypeDetector;
+import Singleton.RootSingletonChecker;
+import Singleton.SingletonChecker;
+import Singleton.SingletonDetector;
+import ExtendsConcreteType.ExtendsConcreteTypeChecker;
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.visitor.VoidVisitor;
@@ -17,8 +24,8 @@ public class run {
      * @param projectDir - Path to the directory or file to process
      */
     public static void listSingletons(File projectDir) {
-        // Root SingletonChecker
-        SingletonChecker sc = new SingletonChecker();
+        // Root Singleton.SingletonCheckerOld
+        SingletonChecker sc = new RootSingletonChecker();
 
         // Explore the directory structure parsing any java files found and checking for Singletons
         new DirExplorer((level, path, file) -> path.endsWith(".java"), (level, path, file) -> {
@@ -46,7 +53,7 @@ public class run {
      * @param projectDir - Path to the directory or file to process
      */
     public static void listComposites(File projectDir) {
-        // Root CompositeChecker
+        // Root Composite.CompositeChecker
         CompositeChecker cc = new CompositeChecker();
 
         // Explore the directory structure parsing any java files found and checking for Singletons
@@ -129,7 +136,7 @@ public class run {
     public static void listAll(File projectDir) {
         ExtendsConcreteTypeChecker ec = new ExtendsConcreteTypeChecker();
         CompositeChecker cc = new CompositeChecker();
-        SingletonChecker sc = new SingletonChecker();
+        SingletonChecker sc = new RootSingletonChecker();
         AdapterChecker ac = new RootAdapterChecker();
 
         // Explore the directory structure parsing any java files found and checking for Singletons
@@ -173,7 +180,7 @@ public class run {
         System.out.println();
 
         // Check every class processed for being a Singleton
-        for (SingletonChecker s : sc.classes) {
+        for (SingletonChecker s : sc.getClasses()) {
             s.isSingleton();
         }
     }

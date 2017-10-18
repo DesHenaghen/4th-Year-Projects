@@ -1,3 +1,5 @@
+package Singleton;
+
 import com.github.javaparser.ast.Modifier;
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
 import com.github.javaparser.ast.body.FieldDeclaration;
@@ -8,7 +10,7 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 public class SingletonDetector extends VoidVisitorAdapter<SingletonChecker> {
 
     /**
-     * Adds a SingletonChecker to the root SingletonChecker object for the current class
+     * Adds a Singleton.SingletonChecker to the root Singleton.SingletonChecker object for the current class
      * @param n
      * @param arg
      */
@@ -21,7 +23,7 @@ public class SingletonDetector extends VoidVisitorAdapter<SingletonChecker> {
 
     /**
      * If MethodDeclaration has a static modifier and has a type that matches the current class, marks the static method
-     * as being found in the SingletonChecker for this class
+     * as being found in the Singleton.SingletonChecker for this class
      * @param n
      * @param arg
      */
@@ -36,7 +38,7 @@ public class SingletonDetector extends VoidVisitorAdapter<SingletonChecker> {
 
     /**
      * If the FieldDeclaration declares a variable of the same type as the current class, marks the static field as
-     * being found in the SingletonChecker
+     * being found in the Singleton.SingletonChecker
      * @param n
      * @param arg
      */

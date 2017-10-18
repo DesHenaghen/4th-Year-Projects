@@ -1,3 +1,5 @@
+package Composite;
+
 import com.github.javaparser.ast.body.FieldDeclaration;
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.body.VariableDeclarator;
@@ -32,7 +34,7 @@ public class CompositeChecker {
      * Constructor for a Singleton Checker of a specified class
      *
      * @param name - Name of the class
-     * @param s - SingletonChecker passed into visitor
+     * @param s - Singleton.SingletonCheckerOld passed into visitor
      */
     public CompositeChecker(String name, CompositeChecker s) {
         className = name;
@@ -40,7 +42,7 @@ public class CompositeChecker {
     }
 
     /**
-     * Constructor for the root SingletonChecker
+     * Constructor for the root Singleton.SingletonCheckerOld
      */
     public CompositeChecker(){
         classes = new HashMap<>();
@@ -55,14 +57,14 @@ public class CompositeChecker {
     }
 
     /**
-     * @return - The SingletonChecker instance that is the root object
+     * @return - The Singleton.SingletonCheckerOld instance that is the root object
      */
     public CompositeChecker getRoot() {
         return root;
     }
 
     /**
-     * Adds a SingletonChecker for the specified class to the list of classes
+     * Adds a Singleton.SingletonCheckerOld for the specified class to the list of classes
      * @param name
      * @return
      */

@@ -1,9 +1,5 @@
 package Adapter;
 
-import com.github.javaparser.ast.body.MethodDeclaration;
-import com.github.javaparser.ast.body.VariableDeclarator;
-import com.github.javaparser.ast.type.ClassOrInterfaceType;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,11 +23,6 @@ public class RootAdapterChecker implements AdapterChecker {
     }
 
     @Override
-    public String getClassName() {
-        return "";
-    }
-
-    @Override
     public AdapterChecker addClass(String name) {
         AdapterChecker sc = new ClassAdapterChecker(name, this);
         possibleAdapters.put(name, sc);
@@ -48,11 +39,6 @@ public class RootAdapterChecker implements AdapterChecker {
     }
 
     @Override
-    public boolean isInterface() {
-        return false;
-    }
-
-    @Override
     public void findAdapters() {
         for (Map.Entry<String, AdapterChecker> c : possibleAdapters.entrySet()) {
             c.getValue().findAdapters();
@@ -65,28 +51,7 @@ public class RootAdapterChecker implements AdapterChecker {
     }
 
     @Override
-    public Map<String, List<String>> getMethods() {
-        return new HashMap<>();
-    }
-
-    @Override
     public List<String> getAllClasses() {
         return allClasses;
     }
-
-    @Override
-    public List<VariableDeclarator> getFields() {
-        return new ArrayList<>();
-    }
-
-    @Override
-    public MethodDeclaration getCurrentMethod() {
-        return null;
-    }
-
-    @Override
-    public void addImplementedClass(ClassOrInterfaceType c) {}
-
-    @Override
-    public void setCurrentMethod(MethodDeclaration m) {}
 }

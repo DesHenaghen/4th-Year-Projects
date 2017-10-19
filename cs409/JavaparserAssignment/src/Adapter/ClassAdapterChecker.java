@@ -45,52 +45,97 @@ public class ClassAdapterChecker implements AdapterChecker {
     @Override
     public void findAdapters() {
         if (fields.size() > 0 && implemented != null) {
-            boolean classIsAdapter = false;
             Map<String, AdapterChecker> interfaces = getInterfaces();
+            // Maps target classes to fields to methods
+            Map<AdapterChecker, Map<VariableDeclarator, List<String>>> adapterDetails = new HashMap<>();
+            boolean classIsAdapter = false;
+
+            // For every interface/class that is implemented or extended by this class
             for (String i : implemented) {
-                //System.out.println(adapter.implemented);
-                //System.out.println(root.interfaces);
                 AdapterChecker intrfc = interfaces.get(i);
 
-                //System.out.println(adapter.methods);
-                //System.out.println(adapter.fields);
-                //if (intrfc != null) System.out.println(intrfc.methods);
-
-                boolean classIsValid = false;
+                // Loop through the methods in this class
                 for (Map.Entry<String, List<String>> m : methods.entrySet()) {
-                    // If this is a method from the interface
+                    // If this is a method from the interface/class
                     if (intrfc != null && intrfc.getMethods() != null && intrfc.getMethods().containsKey(m.getKey())) {
-                        //System.out.println("METHOD: "+m.getKey());
-                        //System.out.println("Hello?");
-                        boolean methodIsValid = false;
-                        // Check every expression in the method for a reference to a field
+                        // Check every expression in the method for a method call on a field that is the same as the method
+                        // e.g. <field>.findAdapters() in this method
+                        expr_loop:
                         for (String expr : m.getValue()) {
                             for (VariableDeclarator field : fields) {
-                                //System.out.println("FIELD: "+field+"; EXPRESSION: "+expr);
                                 if (expr.contains(field.getNameAsString()) && getAllClasses().contains(field.getType().toString())) {
                                     //System.out.println("CLASS: "+adapter.getClassName()+"; METHOD: "+m.getKey()+"; CALL: "+expr);
-                                    methodIsValid = true;
-                                    break;
-                                } else {
-                                    //System.out.println("woops");
+//                                    System.out.println("Class Name: "+className+"\nField Name: "+ field.getType()+" "
+//                                            +field.toString()+"\nMethod Name: "+m.getKey()+"\nTarget Name: "+intrfc.getClassName());
+//                                    System.out.println();
+                                    addAdapterDetails(adapterDetails, intrfc, m.getKey(), field);
+
+                                    classIsAdapter = true;
+                                    break expr_loop;
                                 }
                             }
                         }
-                        if (methodIsValid) {
-                            classIsValid = true;
-                            break;
-                        }
-
                     }
                 }
-                if (classIsValid) {
-                    classIsAdapter = true;
-                    break;
+            }
+
+            if (classIsAdapter)
+                printAdapterDetails(adapterDetails);
+//            System.out.println("Class Name: "+className+"\nField Name: "+ field.getType()+" "
+//            +field.toString()+"\nMethod Name: "+m.getKey()+"\nTarget Name: "+intrfc.getClassName());
+//            System.out.println();
+        }
+    }
+
+    private void printAdapterDetails(Map<AdapterChecker, Map<VariableDeclarator, List<String>>> adapterDetails) {
+        for (Map.Entry<AdapterChecker, Map<VariableDeclarator, List<String>>> intrfc : adapterDetails.entrySet()) {
+            AdapterChecker target = intrfc.getKey();
+            System.out.println("Adapter Class: "+className);
+            System.out.println("Target Class: "+target.getClassName());
+            for (Map.Entry<VariableDeclarator, List<String>> fieldMapping : intrfc.getValue().entrySet()) {
+                VariableDeclarator field = fieldMapping.getKey();
+                System.out.println("Adaptee Field: "+field.getType()+" "+field.getNameAsString());
+                System.out.print("Request Method(s):");
+                for (String method : fieldMapping.getValue()) {
+                    System.out.print(" "+method);
                 }
+                System.out.println();
             }
-            if (classIsAdapter) {
-                System.out.println("Class Name: "+className);
+            System.out.println();
+        }
+    }
+
+    /**
+     *
+     * @param adapterDetails
+     * @param intrfc
+     * @param method
+     * @param field
+     */
+    private void addAdapterDetails(Map<AdapterChecker, Map<VariableDeclarator, List<String>>> adapterDetails, AdapterChecker intrfc, String method, VariableDeclarator field) {
+        // If a mapping already exists for this target
+        if (adapterDetails.containsKey(intrfc)) {
+            Map<VariableDeclarator, List<String>> targetDetails = adapterDetails.get(intrfc);
+
+            // If a mapping already exists for this field
+            if (targetDetails.containsKey(field)){
+                // Add this method to the mapping
+                targetDetails.get(field).add(method);
+            } else {
+                // Create mapping and add method to it
+                List<String> methods = new ArrayList<>();
+                methods.add(method);
+                targetDetails.put(field, methods);
             }
+
+        } else {
+            // Create mapping and add field mapping with method to it
+            Map<VariableDeclarator, List<String>> fieldMapping = new HashMap<>();
+            List<String> methods = new ArrayList<>();
+            methods.add(method);
+            fieldMapping.put(field, methods);
+
+            adapterDetails.put(intrfc, fieldMapping);
         }
     }
 

@@ -1,4 +1,4 @@
-package Composite;
+package Decorator;
 
 import com.github.javaparser.ast.body.FieldDeclaration;
 import com.github.javaparser.ast.body.MethodDeclaration;
@@ -7,23 +7,24 @@ import com.github.javaparser.ast.stmt.ExpressionStmt;
 import com.github.javaparser.ast.stmt.Statement;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ClassCompositeChecker implements CompositeChecker{
+public class ClassDecoratorChecker implements DecoratorChecker {
     List<String> extended = new ArrayList<>();
 
     List<FieldDeclaration> fields = new ArrayList<>();
+    List<VariableDeclarator> validFields = new ArrayList<>();
 
     List<MethodDeclaration> applicableMethods = new ArrayList<>();
+    List<String> possibleMethods = new ArrayList<>();
 
     MethodDeclaration currentMethod = null;
     ExpressionStmt currentExpression = null;
 
     // Instance fields
     private String className = null;
-    private CompositeChecker root = null;
+    private DecoratorChecker root = null;
     private boolean isComposite = false;
 
     /**
@@ -32,7 +33,7 @@ public class ClassCompositeChecker implements CompositeChecker{
      * @param name - Name of the class
      * @param s - Singleton.SingletonCheckerOld passed into visitor
      */
-    public ClassCompositeChecker(String name, CompositeChecker s) {
+    public ClassDecoratorChecker(String name, DecoratorChecker s) {
         className = name;
         root = s.getRoot();
     }
@@ -49,7 +50,7 @@ public class ClassCompositeChecker implements CompositeChecker{
      * @return - The Singleton.SingletonCheckerOld instance that is the root object
      */
     @Override
-    public CompositeChecker getRoot() {
+    public DecoratorChecker getRoot() {
         return root;
     }
 
@@ -59,7 +60,7 @@ public class ClassCompositeChecker implements CompositeChecker{
      * @return
      */
     @Override
-    public CompositeChecker addClass(String name){
+    public DecoratorChecker addClass(String name){
         return root.addClass(name);
     }
 
@@ -105,7 +106,7 @@ public class ClassCompositeChecker implements CompositeChecker{
         for (String i : extended) {
             // If class exists
             if (root.getClasses().containsKey(i)) {
-                CompositeChecker c = root.getClasses().get(i);
+                DecoratorChecker c = root.getClasses().get(i);
                 // Loop through all classes it extends/implements
                 for (String e : c.getExtended()) {
                     // If it's a new one, add it to the list
@@ -119,47 +120,63 @@ public class ClassCompositeChecker implements CompositeChecker{
         extended.addAll(temp);
     }
 
+    /**
+     * Removes all fields that aren't of the same type as one of the implemented/extended classes
+     */
     @Override
-    public void getCompositeClassDetails(List<String> compositeClasses, Map<String, List<MethodDeclaration>> compositeMethods ,Map<String, List<FieldDeclaration>> compositeFields) {
-        for (MethodDeclaration m : applicableMethods) {
-            boolean compositeParam = false;
-
-            for(com.github.javaparser.ast.body.Parameter p : m.getParameters()) {
-                if (extended.contains(p.getType().asString())) {
-                    compositeParam = true;
-                    break;
+    public void trimFields() {
+        for (FieldDeclaration f : fields) {
+            for (VariableDeclarator v : f.getVariables()) {
+                // If variable has type of implement/extend class
+                if (extended.contains(v.getType().toString())) {
+                    validFields.add(v);
                 }
             }
+        }
+    }
 
-            if (compositeParam) {
+    @Override
+    public void getPossibleMethods() {
+        for (String i : extended) {
+            if (root.getClasses().containsKey(i)) {
+                DecoratorChecker c = root.getClasses().get(i);
+                for (MethodDeclaration m : c.getApplicableMethods()) {
+                    possibleMethods.add(m.getNameAsString());
+                }
+            }
+        }
+    }
+
+    @Override
+    public void getDecoratorClassDetails(List<String> compositeClasses, Map<String, List<MethodDeclaration>> compositeMethods , Map<String, List<VariableDeclarator>> compositeFields) {
+        for (MethodDeclaration m : applicableMethods) {
+            if (possibleMethods.contains(m.getNameAsString())) {
                 m.getBody().ifPresent(b -> {
                     for (Statement s : b.getStatements()) {
-                        for (FieldDeclaration f : fields) {
-                            for (VariableDeclarator v : f.getVariables()) {
-                                if (s.toString().contains(v.getNameAsString()+".add")) {
-                                    // Composite Classes
-                                    if (!compositeClasses.contains(className))
-                                        compositeClasses.add(className);
+                        for (VariableDeclarator v : validFields) {
+                            if (s.toString().contains(v.getNameAsString() + "." + m.getNameAsString())) {
+                                // Composite Classes
+                                if (!compositeClasses.contains(className))
+                                    compositeClasses.add(className);
 
-                                    // Composite Methods
-                                    if (compositeMethods.containsKey(className)) {
-                                        if (!compositeMethods.get(className).contains(m))
-                                            compositeMethods.get(className).add(m);
-                                    } else {
-                                        List<MethodDeclaration> methods = new ArrayList<>();
-                                        methods.add(m);
-                                        compositeMethods.put(className, methods);
-                                    }
+                                // Composite Methods
+                                if (compositeMethods.containsKey(className)) {
+                                    if (!compositeMethods.get(className).contains(m))
+                                        compositeMethods.get(className).add(m);
+                                } else {
+                                    List<MethodDeclaration> methods = new ArrayList<>();
+                                    methods.add(m);
+                                    compositeMethods.put(className, methods);
+                                }
 
-                                    // Composite Fields
-                                    if (compositeFields.containsKey(className)) {
-                                        if (!compositeFields.get(className).contains(f))
-                                            compositeFields.get(className).add(f);
-                                    } else {
-                                        List<FieldDeclaration> fields = new ArrayList<>();
-                                        fields.add(f);
-                                        compositeFields.put(className, fields);
-                                    }
+                                // Composite Fields
+                                if (compositeFields.containsKey(className)) {
+                                    if (!compositeFields.get(className).contains(v))
+                                        compositeFields.get(className).add(v);
+                                } else {
+                                    List<VariableDeclarator> fields = new ArrayList<>();
+                                    fields.add(v);
+                                    compositeFields.put(className, fields);
                                 }
                             }
                         }

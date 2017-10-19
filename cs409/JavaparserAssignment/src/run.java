@@ -4,6 +4,9 @@ import Adapter.RootAdapterChecker;
 import Composite.CompositeChecker;
 import Composite.CompositeDetector;
 import Composite.RootCompositeChecker;
+import Decorator.DecoratorChecker;
+import Decorator.DecoratorDetector;
+import Decorator.RootDecoratorChecker;
 import ExtendsConcreteType.ExtendsConcreteTypeDetector;
 import Singleton.RootSingletonChecker;
 import Singleton.SingletonChecker;
@@ -133,11 +136,40 @@ public class run {
         printAdapters(ac);
     }
 
-    public static void listAll(File projectDir) {
+    /**
+     *
+     * @param projectDir
+     */
+    public static void listDecorators(File projectDir) {
+        DecoratorChecker dc = new RootDecoratorChecker();
+
+        // Explore the directory structure parsing any java files found and checking for Singletons
+        new DirExplorer((level, path, file) -> path.endsWith(".java"), (level, path, file) -> {
+            //System.out.println(path);
+            try {
+                // Read file in
+                FileInputStream in = new FileInputStream(file);
+
+                // parse it
+                CompilationUnit cu = JavaParser.parse(in);
+
+                // Visit the compilation unit to detect any Singletons
+                VoidVisitor<DecoratorChecker> decoratorChecker = new DecoratorDetector();
+                decoratorChecker.visit(cu, dc);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }).explore(projectDir);
+
+        printDecorators(dc);
+    }
+
+    private static void listAll(File projectDir) {
         ExtendsConcreteTypeChecker ec = new ExtendsConcreteTypeChecker();
         CompositeChecker cc = new RootCompositeChecker();
         SingletonChecker sc = new RootSingletonChecker();
         AdapterChecker ac = new RootAdapterChecker();
+        DecoratorChecker dc = new RootDecoratorChecker();
 
         // Explore the directory structure parsing any java files found and checking for patterns
         new DirExplorer((level, path, file) -> path.endsWith(".java"), (level, path, file) -> {
@@ -164,6 +196,10 @@ public class run {
                 // Visit the compilation unit to detect any Adapters
                 VoidVisitor<AdapterChecker> adapterDetector = new AdapterDetector();
                 adapterDetector.visit(cu, ac);
+
+                // Visit the compilation unit to detect any Adapters
+                VoidVisitor<DecoratorChecker> decoratorDetector = new DecoratorDetector();
+                decoratorDetector.visit(cu, dc);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -172,6 +208,7 @@ public class run {
         printSingletons(sc);
         printComposites(cc);
         printAdapters(ac);
+        printDecorators(dc);
         printExtendsConcreteType(ec);
     }
 
@@ -192,13 +229,24 @@ public class run {
         ac.findAdapters();
     }
 
-    public static void printComposites(CompositeChecker cc) {
+    private static void printComposites(CompositeChecker cc) {
         System.out.println("\n--------------- Composite Patterns Detected -----------------");
         System.out.println();
 
         // Check every class processed for being a Composite
         cc.flattenTrees();
         cc.determineCompositeClasses();
+    }
+
+    private static void printDecorators(DecoratorChecker dc) {
+        System.out.println("\n--------------- Decorator Patterns Detected -----------------");
+        System.out.println();
+
+        // Check every class processed for being a Decorator
+        dc.flattenTrees();
+        dc.trimFields();
+        dc.getPossibleMethods();
+        dc.determineDecoratorClasses();
     }
 
     private static void printExtendsConcreteType(ExtendsConcreteTypeChecker ec) {
@@ -210,11 +258,13 @@ public class run {
     }
 
     public static void main(String[] args) {
+        //File projectDir = new File("D:\\Libraries\\Documents\\JHotDraw5.1\\sources\\CH");
         File projectDir = new File("D:\\Libraries\\Documents\\JHotDraw5.1\\sources\\CH");
         //listSingletons(projectDir);
         //listExtendsConcreteType(projectDir);
         //listComposites(projectDir);
         //listAdapters(projectDir);
+        //listDecorators(projectDir);
         listAll(projectDir);
     }
 }

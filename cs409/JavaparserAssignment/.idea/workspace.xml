@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fa7c064-fed5-4b8e-9fd4-95aac09a2551" name="Default" comment="Refactored Singleton to use Composite Pattern">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Composite/CompositeCheckerOld.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Decorator/ClassDecoratorChecker.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Decorator/DecoratorChecker.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Decorator/DecoratorDetector.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Decorator/RootDecoratorChecker.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../cs407/Stego/mod3x3.bmp" afterPath="$PROJECT_DIR$/../../cs407/Stego/mod3x3.bmp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../cs407/Stego/mod6x6.bmp" afterPath="$PROJECT_DIR$/../../cs407/Stego/mod6x6.bmp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../cs407/Stego/modtest.bmp" afterPath="$PROJECT_DIR$/../../cs407/Stego/modtest.bmp" />
@@ -14,7 +17,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../cs407/Stego/src/Stego.java" afterPath="$PROJECT_DIR$/../../cs407/Stego/src/Stego.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../cs407/Stego/test.txt" afterPath="$PROJECT_DIR$/../../cs407/Stego/test.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExtendsConcreteType/ExtendsConcreteTypeChecker.java" afterPath="$PROJECT_DIR$/src/ExtendsConcreteType/ExtendsConcreteTypeChecker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Adapter/ClassAdapterChecker.java" afterPath="$PROJECT_DIR$/src/Adapter/ClassAdapterChecker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Composite/ClassCompositeChecker.java" afterPath="$PROJECT_DIR$/src/Composite/ClassCompositeChecker.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/run.java" afterPath="$PROJECT_DIR$/src/run.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="run.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/run.java">
+      <file leaf-file-name="ClassAdapterChecker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Adapter/ClassAdapterChecker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="22" column="55" lean-forward="false" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+            <state relative-caret-position="523">
+              <caret line="101" column="37" lean-forward="false" selection-start-line="101" selection-start-column="37" selection-end-line="101" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,21 +43,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExtendsConcreteTypeChecker.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ExtendsConcreteType/ExtendsConcreteTypeChecker.java">
+      <file leaf-file-name="ClassCompositeChecker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Composite/ClassCompositeChecker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-              <folding />
+            <state relative-caret-position="340">
+              <caret line="153" column="55" lean-forward="true" selection-start-line="153" selection-start-column="55" selection-end-line="153" selection-end-column="55" />
+              <folding>
+                <element signature="docComment;method#getClassName#0;class#ClassCompositeChecker#0" expanded="false" />
+                <element signature="docComment;method#getRoot#0;class#ClassCompositeChecker#0" expanded="false" />
+                <element signature="docComment;method#addClass#0;class#ClassCompositeChecker#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExtendsConcreteTypeDetector.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ExtendsConcreteType/ExtendsConcreteTypeDetector.java">
+      <file leaf-file-name="RootCompositeChecker.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Composite/RootCompositeChecker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+            <state relative-caret-position="357">
+              <caret line="37" column="18" lean-forward="true" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -71,12 +79,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>METHOD: add</find>
-      <find>BINGO</find>
-      <find>BOOLP</find>
-      <find>isComposite</find>
-      <find>Sys</find>
-      <find>CompositeChecker</find>
       <find>methods</find>
       <find>AbstractFig</find>
       <find>Group</find>
@@ -101,6 +103,12 @@
       <find>SingletonCheckerOld</find>
       <find>CompositeCheckerOld</find>
       <find>appli</find>
+      <find>QWERT</find>
+      <find>QWE</find>
+      <find>AbstractTool</find>
+      <find>GroupComm</find>
+      <find>DrawApple</find>
+      <find>Standa</find>
     </findStrings>
     <replaceStrings>
       <replace>Composite</replace>
@@ -141,7 +149,6 @@
         <option value="$PROJECT_DIR$/src/AdapterDetector.java" />
         <option value="$PROJECT_DIR$/src/Adapter/AdapterDetector.java" />
         <option value="$PROJECT_DIR$/src/Adapter/AdapterChecker.java" />
-        <option value="$PROJECT_DIR$/src/Adapter/ClassAdapterChecker.java" />
         <option value="$PROJECT_DIR$/src/Adapter/InterfaceAdapterChecker.java" />
         <option value="$PROJECT_DIR$/src/Adapter/RootAdapterChecker.java" />
         <option value="$PROJECT_DIR$/src/Singleton/SingletonCheckerInt.java" />
@@ -152,12 +159,20 @@
         <option value="$PROJECT_DIR$/src/Singleton/SingletonDetector.java" />
         <option value="$PROJECT_DIR$/src/ExtendsConcreteType/ExtendsConcreteTypeDetector.java" />
         <option value="$PROJECT_DIR$/src/Composite/CompositeCheckerInt.java" />
-        <option value="$PROJECT_DIR$/src/Composite/RootCompositeChecker.java" />
         <option value="$PROJECT_DIR$/src/Composite/CompositeChecker.java" />
         <option value="$PROJECT_DIR$/src/Composite/CompositeDetector.java" />
-        <option value="$PROJECT_DIR$/src/Composite/ClassCompositeChecker.java" />
-        <option value="$PROJECT_DIR$/src/run.java" />
         <option value="$PROJECT_DIR$/src/ExtendsConcreteType/ExtendsConcreteTypeChecker.java" />
+        <option value="$PROJECT_DIR$/src/Decorator/CompositeChecker.java" />
+        <option value="$PROJECT_DIR$/src/Decorator/CompositeDetector.java" />
+        <option value="$PROJECT_DIR$/src/Decorator/DecoratorDecorator.java" />
+        <option value="$PROJECT_DIR$/src/Decorator/ClassDecoratorChecker.java" />
+        <option value="$PROJECT_DIR$/src/Decorator/DecoratorDetector.java" />
+        <option value="$PROJECT_DIR$/src/Decorator/DecoratorChecker.java" />
+        <option value="$PROJECT_DIR$/src/Decorator/RootDecoratorChecker.java" />
+        <option value="$PROJECT_DIR$/src/run.java" />
+        <option value="$PROJECT_DIR$/src/Adapter/ClassAdapterChecker.java" />
+        <option value="$PROJECT_DIR$/src/Composite/ClassCompositeChecker.java" />
+        <option value="$PROJECT_DIR$/src/Composite/RootCompositeChecker.java" />
       </list>
     </option>
   </component>
@@ -169,7 +184,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
+    <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -189,6 +204,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -222,6 +238,12 @@
               <item name="JavaparserAssignment" type="b2602c69:ProjectViewProjectNode" />
               <item name="JavaparserAssignment" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Decorator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaparserAssignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaparserAssignment" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ExtendsConcreteType" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -239,9 +261,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -251,9 +272,10 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="S:\jetbrains\IdeaProjects\JavaparserAssignment" />
-      <recent name="S:\jetbrains\IdeaProjects\JavaparserAssignment\lib" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\deshe\4th-Year-Projects\cs409\JavaparserAssignment\lib" />
+      <recent name="C:\Users\deshe\4th-Year-Projects\cs409\JavaparserAssignment\test" />
+      <recent name="C:\Users\deshe\4th-Year-Projects\cs409\JavaparserAssignment" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Composite" />
@@ -261,10 +283,10 @@
       <recent name="Adapter" />
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\deshe\4th-Year-Projects\cs409\JavaparserAssignment\lib" />
-      <recent name="C:\Users\deshe\4th-Year-Projects\cs409\JavaparserAssignment\test" />
-      <recent name="C:\Users\deshe\4th-Year-Projects\cs409\JavaparserAssignment" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\deshe\4th-Year-Projects\cs409\JavaparserAssignment\src\Decorator" />
+      <recent name="S:\jetbrains\IdeaProjects\JavaparserAssignment" />
+      <recent name="S:\jetbrains\IdeaProjects\JavaparserAssignment\lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -412,7 +434,8 @@
       <updated>1507883737827</updated>
       <workItem from="1507883740811" duration="1109000" />
       <workItem from="1507980308354" duration="58964000" />
-      <workItem from="1508330792222" duration="3158000" />
+      <workItem from="1508330792222" duration="3285000" />
+      <workItem from="1508335855657" duration="9582000" />
     </task>
     <task id="LOCAL-00001" summary="Added detectors for Singleton, Composite, ExtendsConcreteClass and Adapter. Refactored adapter to use composite pattern.">
       <created>1508328705727</created>
@@ -435,15 +458,21 @@
       <option name="project" value="LOCAL" />
       <updated>1508334102199</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Tidied up code">
+      <created>1508334304183</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1508334304183</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63231000" />
+    <option name="totallyTimeSpent" value="72940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -453,12 +482,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3336945" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30985916" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17377399" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35660982" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -496,10 +525,10 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.65005416" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3369803" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17377399" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35667396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
@@ -515,7 +544,8 @@
     <MESSAGE value="Added detectors for Singleton, Composite, ExtendsConcreteClass and Adapter. Refactored adapter to use composite pattern." />
     <MESSAGE value="Refactored Singleton to use Composite Pattern" />
     <MESSAGE value="Refactored Composite to use Composite Pattern" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored Composite to use Composite Pattern" />
+    <MESSAGE value="Tidied up code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tidied up code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -526,22 +556,35 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/run.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="54" lean-forward="false" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+        <state relative-caret-position="85">
+          <caret line="22" column="55" lean-forward="false" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Adapter/ClassAdapterChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="59" column="78" lean-forward="true" selection-start-line="59" selection-start-column="78" selection-end-line="59" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Composite/CompositeCheckerOld.java">
+    <entry file="file://$PROJECT_DIR$/src/run.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="136">
+          <caret line="8" column="54" lean-forward="false" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Composite/CompositeCheckerOld.java" />
     <entry file="file://$PROJECT_DIR$/src/Composite/CompositeDetector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -597,7 +640,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -607,7 +650,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -616,7 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -632,7 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -641,10 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-          <folding>
-            <element signature="e#622#623#0" expanded="false" />
-            <element signature="e#667#668#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -652,7 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
           <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -660,9 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -698,43 +731,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Adapter/ClassAdapterChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-476">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1016#1017#0" expanded="true" />
-            <element signature="e#1048#1049#0" expanded="true" />
-            <element signature="e#1113#1114#0" expanded="true" />
-            <element signature="e#1155#1156#0" expanded="true" />
-            <element signature="e#1224#1225#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="method#findAdapters#0;class#ClassAdapterChecker#0" expanded="false" />
-            <element signature="e#3786#3787#0" expanded="true" />
-            <element signature="e#3829#3830#0" expanded="true" />
-            <element signature="e#3896#3897#0" expanded="true" />
-            <element signature="e#3926#3927#0" expanded="true" />
-            <element signature="e#3983#3984#0" expanded="true" />
-            <element signature="e#4026#4027#0" expanded="true" />
-            <element signature="e#4091#4092#0" expanded="true" />
-            <element signature="e#4120#4121#0" expanded="true" />
-            <element signature="e#4185#4186#0" expanded="true" />
-            <element signature="e#4221#4222#0" expanded="true" />
-            <element signature="e#4298#4299#0" expanded="true" />
-            <element signature="e#4350#4351#0" expanded="true" />
-            <element signature="e#4421#4422#0" expanded="true" />
-            <element signature="e#4454#4455#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Adapter/InterfaceAdapterChecker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#InterfaceAdapterChecker#0;class#InterfaceAdapterChecker#0" expanded="false" />
           </folding>
         </state>
@@ -791,16 +793,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Singleton/SingletonCheckerOld.java" />
-    <entry file="file://$PROJECT_DIR$/src/Singleton/SingletonChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="54" lean-forward="false" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DirExplorer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="719">
@@ -809,76 +801,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Composite/CompositeCheckerOld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1759">
-          <caret line="157" column="68" lean-forward="false" selection-start-line="157" selection-start-column="68" selection-end-line="157" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Composite/RootCompositeChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
-          <folding>
-            <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#1154#1155#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Composite/CompositeDetector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Composite/CompositeCheckerOld.java" />
     <entry file="file://$PROJECT_DIR$/src/Composite/CompositeChecker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="37" column="19" lean-forward="true" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Composite/ClassCompositeChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding>
-            <element signature="e#1761#1762#0" expanded="true" />
-            <element signature="e#1803#1804#0" expanded="true" />
-            <element signature="e#1858#1859#0" expanded="true" />
-            <element signature="e#1889#1890#0" expanded="true" />
-            <element signature="e#1952#1953#0" expanded="true" />
-            <element signature="e#1981#1982#0" expanded="true" />
-            <element signature="e#2046#2047#0" expanded="true" />
-            <element signature="e#2082#2083#0" expanded="true" />
-            <element signature="e#2148#2149#0" expanded="true" />
-            <element signature="e#2188#2189#0" expanded="true" />
-            <element signature="e#2263#2264#0" expanded="true" />
-            <element signature="e#2303#2304#0" expanded="true" />
-            <element signature="e#2374#2375#0" expanded="true" />
-            <element signature="e#2407#2408#0" expanded="true" />
-            <element signature="e#2479#2480#0" expanded="true" />
-            <element signature="e#2516#2517#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/run.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="22" column="55" lean-forward="false" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -893,8 +822,100 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ExtendsConcreteType/ExtendsConcreteTypeChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+        <state relative-caret-position="459">
+          <caret line="36" column="41" lean-forward="true" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Decorator/DecoratorDetector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="56" column="5" lean-forward="false" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Decorator/DecoratorChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Decorator/RootDecoratorChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-544">
+          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Composite/CompositeDetector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-434">
+          <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Singleton/SingletonChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/run.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="257" column="5" lean-forward="true" selection-start-line="257" selection-start-column="5" selection-end-line="257" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Decorator/ClassDecoratorChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="149" column="13" lean-forward="true" selection-start-line="149" selection-start-column="13" selection-end-line="149" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Adapter/ClassAdapterChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="101" column="37" lean-forward="false" selection-start-line="101" selection-start-column="37" selection-end-line="101" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Composite/ClassCompositeChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="153" column="55" lean-forward="true" selection-start-line="153" selection-start-column="55" selection-end-line="153" selection-end-column="55" />
+          <folding>
+            <element signature="docComment;method#getClassName#0;class#ClassCompositeChecker#0" expanded="false" />
+            <element signature="docComment;method#getRoot#0;class#ClassCompositeChecker#0" expanded="false" />
+            <element signature="docComment;method#addClass#0;class#ClassCompositeChecker#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Composite/RootCompositeChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="37" column="18" lean-forward="true" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
           <folding />
         </state>
       </provider>

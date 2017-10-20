@@ -24,7 +24,7 @@ public class ExtendsConcreteTypeChecker {
         concreteClasses.add(name);
     }
 
-    public void listClassesExtendConcrete(){
+    public void findClassesExtendConcrete(){
         for (Map.Entry<String, NodeList<ClassOrInterfaceType>> entry : extendingClasses.entrySet()) {
             String key = entry.getKey();
             NodeList<ClassOrInterfaceType> types = entry.getValue();

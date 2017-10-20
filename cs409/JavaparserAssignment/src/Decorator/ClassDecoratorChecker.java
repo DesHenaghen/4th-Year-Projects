@@ -148,6 +148,13 @@ public class ClassDecoratorChecker implements DecoratorChecker {
     }
 
     @Override
+    public void findDecorators() {
+        flattenTrees();
+        trimFields();
+        getPossibleMethods();
+    }
+
+    @Override
     public void getDecoratorClassDetails(List<String> compositeClasses, Map<String, List<MethodDeclaration>> compositeMethods , Map<String, List<VariableDeclarator>> compositeFields) {
         for (MethodDeclaration m : applicableMethods) {
             if (possibleMethods.contains(m.getNameAsString())) {

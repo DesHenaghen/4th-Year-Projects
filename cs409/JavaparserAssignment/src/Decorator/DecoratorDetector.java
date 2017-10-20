@@ -12,7 +12,7 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 public class DecoratorDetector extends VoidVisitorAdapter<DecoratorChecker> {
 
     /**
-     * Adds a Composite.DecoratorChecker to the root Composite.DecoratorChecker object for the current class
+     * Adds a DecoratorChecker to the root DecoratorChecker object for the current class
      * @param coi
      * @param cch
      */
@@ -32,7 +32,7 @@ public class DecoratorDetector extends VoidVisitorAdapter<DecoratorChecker> {
 
     /**
      * If MethodDeclaration has a static modifier and has a type that matches the current class, marks the static method
-     * as being found in the Composite.DecoratorChecker for this class
+     * as being found in the DecoratorChecker for this class
      * @param m
      * @param cc
      */
@@ -45,7 +45,7 @@ public class DecoratorDetector extends VoidVisitorAdapter<DecoratorChecker> {
 
     /**
      * If the FieldDeclaration declares a variable of the same type as the current class, marks the static field as
-     * being found in the Composite.DecoratorChecker
+     * being found in the DecoratorChecker
      * @param f
      * @param cc
      */

@@ -34,12 +34,13 @@ public interface DecoratorChecker {
     default List<MethodDeclaration> getApplicableMethods() {
         return new ArrayList<>();
     }
-    void flattenTrees();
+    default void flattenTrees() {}
     default void setCurrentMethod(MethodDeclaration m) {}
     default void setCurrentExpression(ExpressionStmt e) {}
-    void trimFields();
+    default void trimFields() {}
     default void determineDecoratorClasses() {}
     default void printDecoratorClasses(List<String> compositeClasses, Map<String, List<MethodDeclaration>> compositeMethods, Map<String, List<VariableDeclarator>> compositeFields) {}
     default void getDecoratorClassDetails(List<String> compositeClasses, Map<String, List<MethodDeclaration>> compositeMethods, Map<String, List<VariableDeclarator>> compositeFields){}
-    void getPossibleMethods();
+    default void getPossibleMethods(){}
+    void findDecorators();
 }

@@ -16,9 +16,7 @@ import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.visitor.VoidVisitor;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.*;
 
 public class RunPatternDetectors {
 
@@ -91,8 +89,7 @@ public class RunPatternDetectors {
         System.out.println();
 
         // Check every class processed for being a Composite
-        cc.flattenTrees();
-        cc.determineCompositeClasses();
+        cc.findComposites();
     }
 
     private static void printDecorators(DecoratorChecker dc) {
@@ -100,10 +97,7 @@ public class RunPatternDetectors {
         System.out.println();
 
         // Check every class processed for being a Decorator
-        dc.flattenTrees();
-        dc.trimFields();
-        dc.getPossibleMethods();
-        dc.determineDecoratorClasses();
+        dc.findDecorators();
     }
 
     private static void printExtendsConcreteType(ExtendsConcreteTypeChecker ec) {
@@ -111,11 +105,13 @@ public class RunPatternDetectors {
         System.out.println();
 
         // Check every class processed for extending a concrete type
-        ec.listClassesExtendConcrete();
+        ec.findClassesExtendConcrete();
     }
 
-    public static void main(String[] args) {
-        File projectDir = new File("D:\\Libraries\\Documents\\JHotDraw5.1\\sources\\CH");
-        listAll(projectDir);
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter the file path of the Java project you would like to detect patterns in: ");
+        String filePath = reader.readLine();
+        listAll(new File(filePath));
     }
 }

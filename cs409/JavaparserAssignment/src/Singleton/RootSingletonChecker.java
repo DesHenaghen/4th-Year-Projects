@@ -11,13 +11,13 @@ public class RootSingletonChecker implements SingletonChecker {
     private List<SingletonChecker> classes = new ArrayList<>();
 
     /**
-     * Constructor for the root Singleton.SingletonCheckerOld
+     * Constructor for the root SingletonChecker
      */
     public RootSingletonChecker(){}
 
 
     /**
-     * @return - The Singleton.SingletonCheckerOld instance that is the root object
+     * @return - The SingletonChecker instance that is the root object
      */
     @Override
     public SingletonChecker getRoot() {
@@ -37,7 +37,7 @@ public class RootSingletonChecker implements SingletonChecker {
     }
 
     /**
-     * Adds a Singleton.SingletonCheckerOld for the specified class to the list of classes
+     * Adds a SingletonChecker for the specified class to the list of classes
      * @param name
      * @return
      */

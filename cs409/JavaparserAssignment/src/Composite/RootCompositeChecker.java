@@ -9,16 +9,16 @@ import java.util.List;
 import java.util.Map;
 
 public class RootCompositeChecker implements  CompositeChecker{
-    // List of all SingletonCheckers created (one for each class)
+    // List of all CompositeCheckers created (one for each class)
     Map<String, CompositeChecker> classes = new HashMap<>();
 
     /**
-     * Constructor for the root Singleton.SingletonCheckerOld
+     * Constructor for the root CompositeChecker
      */
     public RootCompositeChecker(){}
 
     /**
-     * @return - The Singleton.SingletonCheckerOld instance that is the root object
+     * @return - The CompositeChecker instance that is the root object
      */
     @Override
     public CompositeChecker getRoot() {
@@ -26,7 +26,7 @@ public class RootCompositeChecker implements  CompositeChecker{
     }
 
     /**
-     * Adds a Singleton.SingletonCheckerOld for the specified class to the list of classes
+     * Adds a CompositeChecker for the specified class to the list of classes
      * @param name
      * @return
      */
@@ -41,6 +41,12 @@ public class RootCompositeChecker implements  CompositeChecker{
     @Override
     public Map<String, CompositeChecker> getClasses() {
         return classes;
+    }
+
+    @Override
+    public void findComposites() {
+        flattenTrees();
+        determineCompositeClasses();
     }
 
     @Override

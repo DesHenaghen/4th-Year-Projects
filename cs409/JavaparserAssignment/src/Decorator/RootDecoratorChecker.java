@@ -27,7 +27,7 @@ public class RootDecoratorChecker implements DecoratorChecker {
     }
 
     /**
-     * Adds a Singleton.SingletonCheckerOld for the specified class to the list of classes
+     * Adds a DecoratorChecker for the specified class to the list of classes
      * @param name
      * @return
      */
@@ -45,24 +45,11 @@ public class RootDecoratorChecker implements DecoratorChecker {
     }
 
     @Override
-    public void flattenTrees(){
+    public void findDecorators() {
         for (Map.Entry<String, DecoratorChecker> c : classes.entrySet()) {
-            c.getValue().flattenTrees();
+            c.getValue().findDecorators();
         }
-    }
-
-    @Override
-    public void trimFields() {
-        for (Map.Entry<String, DecoratorChecker> c : classes.entrySet()) {
-            c.getValue().trimFields();
-        }
-    }
-
-    @Override
-    public void getPossibleMethods() {
-        for (Map.Entry<String, DecoratorChecker> c : classes.entrySet()) {
-            c.getValue().getPossibleMethods();
-        }
+        determineDecoratorClasses();
     }
 
     @Override

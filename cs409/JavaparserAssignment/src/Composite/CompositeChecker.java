@@ -39,4 +39,5 @@ public interface CompositeChecker {
     default void determineCompositeClasses() {}
     default void printCompositeClasses(List<String> compositeClasses, Map<String, List<MethodDeclaration>> compositeMethods, Map<String, List<FieldDeclaration>> compositeFields) {}
     default void getCompositeClassDetails(List<String> compositeClasses, Map<String, List<MethodDeclaration>> compositeMethods , Map<String, List<FieldDeclaration>> compositeFields){}
+    default void findComposites() {}
 }

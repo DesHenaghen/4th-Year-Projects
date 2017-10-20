@@ -23,7 +23,7 @@ public class ClassSingletonChecker implements SingletonChecker{
      * Constructor for a Singleton Checker of a specified class
      *
      * @param name - Name of the class
-     * @param s - Singleton.SingletonCheckerOld passed into visitor
+     * @param s - SingletonChecker passed into visitor
      */
     public ClassSingletonChecker(String name, SingletonChecker s) {
         className = name;
@@ -39,7 +39,7 @@ public class ClassSingletonChecker implements SingletonChecker{
     }
 
     /**
-     * @return - The Singleton.SingletonCheckerOld instance that is the root object
+     * @return - The SingletonChecker instance that is the root object
      */
     @Override
     public SingletonChecker getRoot() {
@@ -82,7 +82,7 @@ public class ClassSingletonChecker implements SingletonChecker{
     }
 
     /**
-     * Adds a Singleton.SingletonCheckerOld for the specified class to the list of classes
+     * Adds a SingletonChecker for the specified class to the list of classes
      * @param name
      * @return
      */

@@ -9,7 +9,7 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 public class CompositeDetector extends VoidVisitorAdapter<CompositeChecker> {
 
     /**
-     * Adds a Composite.CompositeChecker to the root Composite.CompositeChecker object for the current class
+     * Adds a ClassCompositeChecker to the RootCompositeChecker object for the current class
      * @param coi
      * @param cch
      */
@@ -29,7 +29,7 @@ public class CompositeDetector extends VoidVisitorAdapter<CompositeChecker> {
 
     /**
      * If MethodDeclaration has a static modifier and has a type that matches the current class, marks the static method
-     * as being found in the Composite.CompositeChecker for this class
+     * as being found in the CompositeChecker for this class
      * @param m
      * @param cc
      */
@@ -42,7 +42,7 @@ public class CompositeDetector extends VoidVisitorAdapter<CompositeChecker> {
 
     /**
      * If the FieldDeclaration declares a variable of the same type as the current class, marks the static field as
-     * being found in the Composite.CompositeChecker
+     * being found in the CompositeChecker
      * @param f
      * @param cc
      */
@@ -62,24 +62,23 @@ public class CompositeDetector extends VoidVisitorAdapter<CompositeChecker> {
 
     @Override
     public void visit(MethodCallExpr m, CompositeChecker cc) {
-            for(com.github.javaparser.ast.expr.Expression e : m.getArguments()) {
-                if (cc.getCurrentExpression() != null && cc.getCurrentMethod() != null) {
-                    for (Parameter p : cc.getCurrentMethod().getParameters()) {
-                        if (p.getNameAsString().equals(e.toString())) {
-//                            System.out.println("BINGO");
-//                            System.out.print("CLASS: " + cc.getClassName());
-//                            System.out.print("\nMETHOD: " + cc.currentMethod.getDeclarationAsString());
-//                            System.out.print("\nexpression: " + cc.currentExpression.toString());
-//                            System.out.println("\nvariable: " + e);
-                            cc.getApplicableMethods().add(cc.getCurrentMethod());
+        // Loop through all arguments in the method call
+        for(com.github.javaparser.ast.expr.Expression e : m.getArguments()) {
+            if (cc.getCurrentExpression() != null && cc.getCurrentMethod() != null) {
 
-                            // If current method is null, no more processing of the expressions in this method
-                            // will take place
-                            cc.setCurrentMethod(null);
-                        }
+                // Check if the argument is one of the parameters passed in
+                for (Parameter p : cc.getCurrentMethod().getParameters()) {
+                    if (p.getNameAsString().equals(e.toString())) {
+                        // This method is possibly a composite method, so save for post-processing
+                        cc.getApplicableMethods().add(cc.getCurrentMethod());
+
+                        // If current method is null, no more processing of the expressions in this method
+                        // will take place
+                        cc.setCurrentMethod(null);
                     }
                 }
             }
+        }
 
         super.visit(m, cc);
     }

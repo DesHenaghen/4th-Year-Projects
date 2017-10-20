@@ -17,13 +17,6 @@ public class AdapterDetector extends VoidVisitorAdapter<AdapterChecker> {
      */
     @Override
     public void visit(ClassOrInterfaceDeclaration coi, AdapterChecker ac) {
-//        // Add all extended and implemented classes
-//        for (ClassOrInterfaceType c  : coi.getExtendedTypes()) {
-//            cc.extended.add(c.getNameAsString());
-//        }
-//        for (ClassOrInterfaceType c  : coi.getImplementedTypes()) {
-//            cc.extended.add(c.getNameAsString());
-//        }
         NodeList<ClassOrInterfaceType> implemented = coi.getImplementedTypes();
         NodeList<ClassOrInterfaceType> extended = coi.getExtendedTypes();
 
@@ -88,25 +81,15 @@ public class AdapterDetector extends VoidVisitorAdapter<AdapterChecker> {
     @Override
     public void visit(MethodCallExpr m, AdapterChecker ac) {
         if (!ac.isInterface() && !ac.isRoot()) {
-//            if (ac.getClassName() != null && ac.getClassName().equals("LineConnection")) {
-//                System.out.println(m.toString());
-//            }
             String methodString = m.toString();
             // If methodCall is an invocation of a variable's method...
             if (methodString.indexOf('.') > -1) {
-                //System.out.println(methodString);
-                //System.out.println(methodString.substring(0, methodString.indexOf('.')));
                 // Save it to the method
                 if (ac.getCurrentMethod() != null) {
                     if (ac.getMethods() != null && ac.getMethods().containsKey(ac.getCurrentMethod().getNameAsString())) {
                         ac.getMethods().get(ac.getCurrentMethod().getNameAsString())
                                 .add(methodString.substring(0, methodString.indexOf('.')));
                     }
-//                    if (ac.getClassName() != null && ac.getClassName().equals("LineConnection")) {
-//                        System.out.println("SUCCESS");
-//                        System.out.println(methodString.substring(0, methodString.indexOf('.')));
-//                        System.out.println();
-//                    }
                 }
             }
         }

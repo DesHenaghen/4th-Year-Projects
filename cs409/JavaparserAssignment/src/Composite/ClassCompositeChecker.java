@@ -137,6 +137,7 @@ public class ClassCompositeChecker implements CompositeChecker{
                         for (FieldDeclaration f : fields) {
                             for (VariableDeclarator v : f.getVariables()) {
                                 if (s.toString().contains(v.getNameAsString()+".add")) {
+                                    // Success! We have found a composite class
                                     // Composite Classes
                                     if (!compositeClasses.contains(className))
                                         compositeClasses.add(className);

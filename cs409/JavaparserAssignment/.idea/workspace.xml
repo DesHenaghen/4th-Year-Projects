@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fa7c064-fed5-4b8e-9fd4-95aac09a2551" name="Default" comment="Refactored Singleton to use Composite Pattern">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Decorator/ClassDecoratorChecker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Decorator/DecoratorChecker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Decorator/DecoratorDetector.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Decorator/RootDecoratorChecker.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/run.java" afterPath="$PROJECT_DIR$/src/RunPatternDetectors.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../cs407/Stego/mod3x3.bmp" afterPath="$PROJECT_DIR$/../../cs407/Stego/mod3x3.bmp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../cs407/Stego/mod6x6.bmp" afterPath="$PROJECT_DIR$/../../cs407/Stego/mod6x6.bmp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../cs407/Stego/modtest.bmp" afterPath="$PROJECT_DIR$/../../cs407/Stego/modtest.bmp" />
@@ -17,9 +14,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../cs407/Stego/src/Stego.java" afterPath="$PROJECT_DIR$/../../cs407/Stego/src/Stego.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../cs407/Stego/test.txt" afterPath="$PROJECT_DIR$/../../cs407/Stego/test.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Adapter/AdapterDetector.java" afterPath="$PROJECT_DIR$/src/Adapter/AdapterDetector.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Adapter/ClassAdapterChecker.java" afterPath="$PROJECT_DIR$/src/Adapter/ClassAdapterChecker.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Composite/ClassCompositeChecker.java" afterPath="$PROJECT_DIR$/src/Composite/ClassCompositeChecker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/run.java" afterPath="$PROJECT_DIR$/src/run.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Composite/CompositeDetector.java" afterPath="$PROJECT_DIR$/src/Composite/CompositeDetector.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,11 +29,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ClassAdapterChecker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Adapter/ClassAdapterChecker.java">
+      <file leaf-file-name="RunPatternDetectors.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RunPatternDetectors.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="101" column="37" lean-forward="false" selection-start-line="101" selection-start-column="37" selection-end-line="101" selection-end-column="37" />
+            <state relative-caret-position="-255">
+              <caret line="50" column="33" lean-forward="false" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdapterDetector.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Adapter/AdapterDetector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="413">
+              <caret line="74" column="13" lean-forward="true" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,26 +51,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassCompositeChecker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Composite/ClassCompositeChecker.java">
+      <file leaf-file-name="DecoratorDetector.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Decorator/DecoratorDetector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="153" column="55" lean-forward="true" selection-start-line="153" selection-start-column="55" selection-end-line="153" selection-end-column="55" />
+            <state relative-caret-position="438">
+              <caret line="36" column="16" lean-forward="true" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClassAdapterChecker.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Adapter/ClassAdapterChecker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="64" column="71" lean-forward="false" selection-start-line="64" selection-start-column="71" selection-end-line="64" selection-end-column="71" />
               <folding>
-                <element signature="docComment;method#getClassName#0;class#ClassCompositeChecker#0" expanded="false" />
-                <element signature="docComment;method#getRoot#0;class#ClassCompositeChecker#0" expanded="false" />
-                <element signature="docComment;method#addClass#0;class#ClassCompositeChecker#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RootCompositeChecker.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Composite/RootCompositeChecker.java">
+      <file leaf-file-name="ClassDecoratorChecker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Decorator/ClassDecoratorChecker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="37" column="18" lean-forward="true" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+            <state relative-caret-position="442">
+              <caret line="149" column="13" lean-forward="true" selection-start-line="149" selection-start-column="13" selection-end-line="149" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RootAdapterChecker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Adapter/RootAdapterChecker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,12 +107,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>methods</find>
-      <find>AbstractFig</find>
-      <find>Group</find>
-      <find>Reverse</find>
-      <find>fEnd</find>
-      <find>implemented</find>
       <find>fStart</find>
       <find>LineC</find>
       <find>Line</find>
@@ -109,6 +131,12 @@
       <find>GroupComm</find>
       <find>DrawApple</find>
       <find>Standa</find>
+      <find>Target Cla</find>
+      <find>COMMANDP</find>
+      <find>Radius</find>
+      <find>OffsetLo</find>
+      <find>SelectionT</find>
+      <find>DecoratorFig</find>
     </findStrings>
     <replaceStrings>
       <replace>Composite</replace>
@@ -147,10 +175,6 @@
         <option value="$PROJECT_DIR$/src/AdapterChecker.java" />
         <option value="$PROJECT_DIR$/src/ClassAdapterChecker.java" />
         <option value="$PROJECT_DIR$/src/AdapterDetector.java" />
-        <option value="$PROJECT_DIR$/src/Adapter/AdapterDetector.java" />
-        <option value="$PROJECT_DIR$/src/Adapter/AdapterChecker.java" />
-        <option value="$PROJECT_DIR$/src/Adapter/InterfaceAdapterChecker.java" />
-        <option value="$PROJECT_DIR$/src/Adapter/RootAdapterChecker.java" />
         <option value="$PROJECT_DIR$/src/Singleton/SingletonCheckerInt.java" />
         <option value="$PROJECT_DIR$/src/Singleton/SingletonCheckerOld.java" />
         <option value="$PROJECT_DIR$/src/Singleton/RootSingletonChecker.java" />
@@ -160,7 +184,6 @@
         <option value="$PROJECT_DIR$/src/ExtendsConcreteType/ExtendsConcreteTypeDetector.java" />
         <option value="$PROJECT_DIR$/src/Composite/CompositeCheckerInt.java" />
         <option value="$PROJECT_DIR$/src/Composite/CompositeChecker.java" />
-        <option value="$PROJECT_DIR$/src/Composite/CompositeDetector.java" />
         <option value="$PROJECT_DIR$/src/ExtendsConcreteType/ExtendsConcreteTypeChecker.java" />
         <option value="$PROJECT_DIR$/src/Decorator/CompositeChecker.java" />
         <option value="$PROJECT_DIR$/src/Decorator/CompositeDetector.java" />
@@ -169,10 +192,16 @@
         <option value="$PROJECT_DIR$/src/Decorator/DecoratorDetector.java" />
         <option value="$PROJECT_DIR$/src/Decorator/DecoratorChecker.java" />
         <option value="$PROJECT_DIR$/src/Decorator/RootDecoratorChecker.java" />
-        <option value="$PROJECT_DIR$/src/run.java" />
-        <option value="$PROJECT_DIR$/src/Adapter/ClassAdapterChecker.java" />
-        <option value="$PROJECT_DIR$/src/Composite/ClassCompositeChecker.java" />
         <option value="$PROJECT_DIR$/src/Composite/RootCompositeChecker.java" />
+        <option value="$PROJECT_DIR$/src/Adapter/InterfaceAdapterChecker.java" />
+        <option value="$PROJECT_DIR$/src/Adapter/AdapterChecker.java" />
+        <option value="$PROJECT_DIR$/src/Adapter/RootAdapterChecker.java" />
+        <option value="$PROJECT_DIR$/src/run.java" />
+        <option value="$PROJECT_DIR$/src/RunPatternDetectors.java" />
+        <option value="$PROJECT_DIR$/src/Composite/CompositeDetector.java" />
+        <option value="$PROJECT_DIR$/src/Composite/ClassCompositeChecker.java" />
+        <option value="$PROJECT_DIR$/src/Adapter/AdapterDetector.java" />
+        <option value="$PROJECT_DIR$/src/Adapter/ClassAdapterChecker.java" />
       </list>
     </option>
   </component>
@@ -184,7 +213,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+    <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -211,11 +240,6 @@
             <path>
               <item name="JavaparserAssignment" type="b2602c69:ProjectViewProjectNode" />
               <item name="JavaparserAssignment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaparserAssignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaparserAssignment" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JavaparserAssignment" type="b2602c69:ProjectViewProjectNode" />
@@ -251,11 +275,6 @@
               <item name="JavaparserAssignment" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Singleton" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaparserAssignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaparserAssignment" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -301,7 +320,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.run">
+  <component name="RunManager" selected="Application.RunPatternDetectors">
+    <configuration name="RunPatternDetectors" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="RunPatternDetectors" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JavaparserAssignment" />
+      <envs />
+    </configuration>
     <configuration name="Stego" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Stego" />
@@ -397,27 +430,13 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="run" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="JavaparserAssignment" />
-      <envs />
-    </configuration>
     <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Application.run" />
+      <item index="0" class="java.lang.String" itemvalue="Application.RunPatternDetectors" />
       <item index="1" class="java.lang.String" itemvalue="Application.Stego" />
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.run" />
+        <item index="0" class="java.lang.String" itemvalue="Application.RunPatternDetectors" />
         <item index="1" class="java.lang.String" itemvalue="Application.Stego" />
       </list>
     </recent_temporary>
@@ -435,7 +454,7 @@
       <workItem from="1507883740811" duration="1109000" />
       <workItem from="1507980308354" duration="58964000" />
       <workItem from="1508330792222" duration="3285000" />
-      <workItem from="1508335855657" duration="9582000" />
+      <workItem from="1508335855657" duration="23326000" />
     </task>
     <task id="LOCAL-00001" summary="Added detectors for Singleton, Composite, ExtendsConcreteClass and Adapter. Refactored adapter to use composite pattern.">
       <created>1508328705727</created>
@@ -465,14 +484,22 @@
       <option name="project" value="LOCAL" />
       <updated>1508334304183</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added Decorator Pattern Detection. Improved Adapter pattern detection output.">
+      <created>1508428759835</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1508428759835</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72940000" />
+    <option name="totallyTimeSpent" value="86684000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -482,12 +509,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30985916" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6543879" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35660982" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15511727" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -525,10 +552,10 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3369803" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6543879" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35667396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3192964" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
@@ -545,7 +572,8 @@
     <MESSAGE value="Refactored Singleton to use Composite Pattern" />
     <MESSAGE value="Refactored Composite to use Composite Pattern" />
     <MESSAGE value="Tidied up code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tidied up code" />
+    <MESSAGE value="Added Decorator Pattern Detection. Improved Adapter pattern detection output." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Decorator Pattern Detection. Improved Adapter pattern detection output." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -554,16 +582,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/run.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="22" column="55" lean-forward="false" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Adapter/ClassAdapterChecker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
@@ -574,7 +592,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/run.java">
+    <entry file="file://$PROJECT_DIR$/src/RunPatternDetectors.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="54" lean-forward="false" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
@@ -645,7 +663,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/run.java">
+    <entry file="file://$PROJECT_DIR$/src/RunPatternDetectors.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -721,73 +739,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Adapter/AdapterCheckerOld.java" />
-    <entry file="file://$PROJECT_DIR$/src/Adapter/AdapterChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="48" lean-forward="false" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Adapter/InterfaceAdapterChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#InterfaceAdapterChecker#0;class#InterfaceAdapterChecker#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Adapter/AdapterDetector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="32" column="46" lean-forward="true" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Adapter/RootAdapterChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#1269#1270#0" expanded="true" />
-            <element signature="e#1302#1303#0" expanded="true" />
-            <element signature="e#1359#1360#0" expanded="true" />
-            <element signature="e#1392#1393#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Singleton/SingletonDetector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Singleton/RootSingletonChecker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Singleton/ClassSingletonChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1479">
-          <caret line="95" column="13" lean-forward="false" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -812,53 +767,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExtendsConcreteType/ExtendsConcreteTypeDetector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ExtendsConcreteType/ExtendsConcreteTypeChecker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="36" column="41" lean-forward="true" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Decorator/DecoratorDetector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="56" column="5" lean-forward="false" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Decorator/DecoratorChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Decorator/RootDecoratorChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-544">
-          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Composite/CompositeDetector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-434">
-          <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -872,38 +785,400 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/run.java">
+    <entry file="file://$PROJECT_DIR$/src/ExtendsConcreteType/ExtendsConcreteTypeDetector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="257" column="5" lean-forward="true" selection-start-line="257" selection-start-column="5" selection-end-line="257" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Decorator/ClassDecoratorChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="149" column="13" lean-forward="true" selection-start-line="149" selection-start-column="13" selection-end-line="149" selection-end-column="13" />
+        <state relative-caret-position="187">
+          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Adapter/ClassAdapterChecker.java">
+    <entry file="file://$PROJECT_DIR$/src/Singleton/SingletonDetector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="101" column="37" lean-forward="false" selection-start-line="101" selection-start-column="37" selection-end-line="101" selection-end-column="37" />
+        <state relative-caret-position="493">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Adapter/AdapterChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="16" lean-forward="true" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="uml://MODULES/mdl-JavaparserAssignment">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MODULES</ID>
+          <OriginalElement>mdl-JavaparserAssignment</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="100.5" y="15.0" />
+          <SelectedNodes />
+          <Categories />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/C:/Users/deshe/4th-Year-Projects/cs409/JavaparserAssignment/src/Adapter;C:/Users/deshe/4th-Year-Projects/cs409/JavaparserAssignment/src/Composite;C:/Users/deshe/4th-Year-Projects/cs409/JavaparserAssignment/src/Decorator;C:/Users/deshe/4th-Year-Projects/cs409/JavaparserAssignment/src/ExtendsConcreteType;C:/Users/deshe/4th-Year-Projects/cs409/JavaparserAssignment/src/Singleton;">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src/Adapter;C:/Users/deshe/4th-Year-Projects/cs409/JavaparserAssignment/src/Composite;C:/Users/deshe/4th-Year-Projects/cs409/JavaparserAssignment/src/Decorator;C:/Users/deshe/4th-Year-Projects/cs409/JavaparserAssignment/src/ExtendsConcreteType;C:/Users/deshe/4th-Year-Projects/cs409/JavaparserAssignment/src/Singleton;</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.30000000000000016" x="792.0" y="289.5" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/Adapter.AdapterChecker">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Adapter.AdapterChecker</OriginalElement>
+          <nodes>
+            <node x="" y="">Adapter.AdapterDetector</node>
+            <node x="" y="">Adapter.RootAdapterChecker</node>
+            <node x="" y="">Adapter.ClassAdapterChecker</node>
+            <node x="" y="">Adapter.InterfaceAdapterChecker</node>
+            <node x="" y="">Adapter.AdapterChecker</node>
+            <node x="" y="">com.github.javaparser.ast.visitor.VoidVisitorAdapter</node>
+            <node x="" y="">com.github.javaparser.ast.visitor.VoidVisitor</node>
+            <node x="" y="">run</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="271.5" y="210.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/Decorator.RootDecoratorChecker">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Decorator.RootDecoratorChecker</OriginalElement>
+          <nodes>
+            <node x="866.2767051211207" y="120.0">Composite.ClassCompositeChecker</node>
+            <node x="1133.5267051211208" y="360.0">RunPatternDetectors</node>
+            <node x="406.0000000000002" y="120.0">Adapter.AdapterDetector</node>
+            <node x="217.08225683890635" y="220.0">Adapter.RootAdapterChecker</node>
+            <node x="1781.4017051211208" y="220.0">Singleton.RootSingletonChecker</node>
+            <node x="0.0" y="120.0">Adapter.ClassAdapterChecker</node>
+            <node x="182.00000000000023" y="120.0">Adapter.InterfaceAdapterChecker</node>
+            <node x="1912.2913270240406" y="120.0">Singleton.SingletonDetector</node>
+            <node x="564.0000000000002" y="220.0">ExtendsConcreteType.ExtendsConcreteTypeDetector</node>
+            <node x="1093.0267051211208" y="120.0">Composite.CompositeDetector</node>
+            <node x="1694.0413270240406" y="120.0">Singleton.ClassSingletonChecker</node>
+            <node x="1394.0267051211208" y="220.0">Decorator.RootDecoratorChecker</node>
+            <node x="1835.60837190292" y="0.0">Singleton.SingletonChecker</node>
+            <node x="1267.0267051211208" y="220.0">DirExplorer</node>
+            <node x="234.69170523625326" y="0.0">Adapter.AdapterChecker</node>
+            <node x="1302.7117211246205" y="120.0">Decorator.ClassDecoratorChecker</node>
+            <node x="1526.0413270240406" y="120.0">Decorator.DecoratorDetector</node>
+            <node x="994.85837190292" y="0.0">Composite.CompositeChecker</node>
+            <node x="1453.60837190292" y="0.0">Decorator.DecoratorChecker</node>
+            <node x="955.7187500000002" y="220.0">Composite.RootCompositeChecker</node>
+            <node x="639.2767051211207" y="120.0">ExtendsConcreteType.ExtendsConcreteTypeChecker</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="Adapter.InterfaceAdapterChecker" target="Adapter.RootAdapterChecker">
+              <point x="45.25" y="15.0" />
+              <point x="317.7500000000002" y="170.0" />
+              <point x="297.08225683890635" y="170.0" />
+              <point x="0.0" y="-15.0" />
+            </edge>
+            <edge source="RunPatternDetectors" target="Composite.RootCompositeChecker">
+              <point x="-14.90625" y="-15.0" />
+              <point x="1198.1204551211208" y="280.0" />
+              <point x="1043.7187500000002" y="280.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="Singleton.SingletonDetector" target="Singleton.SingletonChecker">
+              <point x="0.0" y="-15.0" />
+              <point x="1984.7913270240406" y="100.0" />
+              <point x="1951.79587190292" y="100.0" />
+              <point x="44.6875" y="15.0" />
+            </edge>
+            <edge source="RunPatternDetectors" target="Singleton.SingletonDetector">
+              <point x="64.59375" y="-15.0" />
+              <point x="1277.6204551211208" y="330.0" />
+              <point x="1984.7913270240406" y="330.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="RunPatternDetectors" target="Adapter.AdapterChecker">
+              <point x="-54.65625" y="-15.0" />
+              <point x="1158.3704551211208" y="320.0" />
+              <point x="553.5000000000002" y="320.0" />
+              <point x="553.5000000000002" y="50.0" />
+              <point x="363.55534159988963" y="50.0" />
+              <point x="61.363636363636374" y="15.0" />
+            </edge>
+            <edge source="Singleton.ClassSingletonChecker" target="Singleton.SingletonChecker">
+              <point x="56.66666666666674" y="-15.0" />
+              <point x="1835.7079936907073" y="70.0" />
+              <point x="1880.29587190292" y="70.0" />
+              <point x="-26.8125" y="15.0" />
+            </edge>
+            <edge source="Adapter.RootAdapterChecker" target="Adapter.ClassAdapterChecker">
+              <point x="-68.57142857142853" y="-15.0" />
+              <point x="228.5108282674778" y="200.0" />
+              <point x="40.5" y="200.0" />
+              <point x="-40.5" y="15.0" />
+            </edge>
+            <edge source="Decorator.ClassDecoratorChecker" target="Decorator.DecoratorChecker">
+              <point x="0.0" y="-15.0" />
+              <point x="1388.7117211246205" y="60.0" />
+              <point x="1480.79587190292" y="60.0" />
+              <point x="-45.3125" y="15.0" />
+            </edge>
+            <edge source="Singleton.RootSingletonChecker" target="Singleton.SingletonChecker">
+              <point x="-21.0" y="-15.0" />
+              <point x="1844.4017051211208" y="200.0" />
+              <point x="1874.5413270240406" y="200.0" />
+              <point x="1874.5413270240406" y="80.0" />
+              <point x="1898.17087190292" y="80.0" />
+              <point x="-8.9375" y="15.0" />
+            </edge>
+            <edge source="RunPatternDetectors" target="Decorator.DecoratorDetector">
+              <point x="34.78125" y="-15.0" />
+              <point x="1247.8079551211208" y="300.0" />
+              <point x="1599.5413270240406" y="300.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="Singleton.RootSingletonChecker" target="Singleton.ClassSingletonChecker">
+              <point x="-63.0" y="-15.0" />
+              <point x="1802.4017051211208" y="200.0" />
+              <point x="1779.0413270240406" y="200.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="Adapter.InterfaceAdapterChecker" target="Adapter.AdapterChecker">
+              <point x="-60.33333333333334" y="-15.0" />
+              <point x="212.16666666666686" y="90.0" />
+              <point x="277.64625069079875" y="90.0" />
+              <point x="-24.54545454545456" y="15.0" />
+            </edge>
+            <edge source="RunPatternDetectors" target="Decorator.DecoratorChecker">
+              <point x="44.71875" y="-15.0" />
+              <point x="1257.7454551211208" y="310.0" />
+              <point x="1683.5413270240406" y="310.0" />
+              <point x="1683.5413270240406" y="90.0" />
+              <point x="1589.54587190292" y="90.0" />
+              <point x="63.4375" y="15.0" />
+            </edge>
+            <edge source="RunPatternDetectors" target="DirExplorer">
+              <point x="14.90625" y="-15.0" />
+              <point x="1227.9329551211208" y="280.0" />
+              <point x="1320.5267051211208" y="280.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="RunPatternDetectors" target="Adapter.RootAdapterChecker">
+              <point x="-74.53125" y="-15.0" />
+              <point x="1138.4954551211208" y="340.0" />
+              <point x="297.08225683890635" y="340.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="RunPatternDetectors" target="Decorator.RootDecoratorChecker">
+              <point x="24.84375" y="-15.0" />
+              <point x="1237.8704551211208" y="290.0" />
+              <point x="1479.0267051211208" y="290.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="Composite.ClassCompositeChecker" target="Composite.CompositeChecker">
+              <point x="-59.33333333333326" y="-15.0" />
+              <point x="895.9433717877874" y="80.0" />
+              <point x="1004.29587190292" y="80.0" />
+              <point x="-66.0625" y="15.0" />
+            </edge>
+            <edge source="Decorator.RootDecoratorChecker" target="Decorator.ClassDecoratorChecker">
+              <point x="-63.75" y="-15.0" />
+              <point x="1415.2767051211208" y="200.0" />
+              <point x="1388.7117211246205" y="200.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="RunPatternDetectors" target="Composite.CompositeChecker">
+              <point x="4.96875" y="-15.0" />
+              <point x="1217.9954551211208" y="270.0" />
+              <point x="1256.5267051211208" y="270.0" />
+              <point x="1256.5267051211208" y="90.0" />
+              <point x="1136.42087190292" y="90.0" />
+              <point x="66.0625" y="15.0" />
+            </edge>
+            <edge source="Composite.CompositeDetector" target="Composite.CompositeChecker">
+              <point x="0.0" y="-15.0" />
+              <point x="1169.5267051211208" y="100.0" />
+              <point x="1117.54587190292" y="100.0" />
+              <point x="47.1875" y="15.0" />
+            </edge>
+            <edge source="RunPatternDetectors" target="ExtendsConcreteType.ExtendsConcreteTypeChecker">
+              <point x="-24.84375" y="-15.0" />
+              <point x="1188.1829551211208" y="290.0" />
+              <point x="805.2454551211207" y="290.0" />
+              <point x="805.2454551211207" y="200.0" />
+              <point x="811.7767051211207" y="200.0" />
+              <point x="69.0" y="15.0" />
+            </edge>
+            <edge source="Adapter.RootAdapterChecker" target="Adapter.InterfaceAdapterChecker">
+              <point x="-22.857142857142833" y="-15.0" />
+              <point x="274.22511398176357" y="180.0" />
+              <point x="227.25000000000023" y="180.0" />
+              <point x="-45.25" y="15.0" />
+            </edge>
+            <edge source="RunPatternDetectors" target="Composite.CompositeDetector">
+              <point x="-4.96875" y="-15.0" />
+              <point x="1208.0579551211208" y="270.0" />
+              <point x="1169.5267051211208" y="270.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="RunPatternDetectors" target="ExtendsConcreteType.ExtendsConcreteTypeDetector">
+              <point x="-44.71875" y="-15.0" />
+              <point x="1168.3079551211208" y="310.0" />
+              <point x="668.5000000000002" y="310.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="RunPatternDetectors" target="Singleton.RootSingletonChecker">
+              <point x="54.65625" y="-15.0" />
+              <point x="1267.6829551211208" y="320.0" />
+              <point x="1865.4017051211208" y="320.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="Decorator.DecoratorDetector" target="Decorator.DecoratorChecker">
+              <point x="0.0" y="-15.0" />
+              <point x="1599.5413270240406" y="100.0" />
+              <point x="1571.42087190292" y="100.0" />
+              <point x="45.3125" y="15.0" />
+            </edge>
+            <edge source="ExtendsConcreteType.ExtendsConcreteTypeDetector" target="ExtendsConcreteType.ExtendsConcreteTypeChecker">
+              <point x="0.0" y="-15.0" />
+              <point x="668.5000000000002" y="200.0" />
+              <point x="673.7767051211207" y="200.0" />
+              <point x="-69.0" y="15.0" />
+            </edge>
+            <edge source="Adapter.ClassAdapterChecker" target="Adapter.RootAdapterChecker">
+              <point x="40.5" y="15.0" />
+              <point x="121.5" y="190.0" />
+              <point x="251.36797112462068" y="190.0" />
+              <point x="-45.714285714285666" y="-15.0" />
+            </edge>
+            <edge source="Decorator.RootDecoratorChecker" target="Decorator.DecoratorChecker">
+              <point x="-21.25" y="-15.0" />
+              <point x="1457.7767051211208" y="200.0" />
+              <point x="1488.1663270240406" y="200.0" />
+              <point x="1488.1663270240406" y="80.0" />
+              <point x="1517.04587190292" y="80.0" />
+              <point x="-9.0625" y="15.0" />
+            </edge>
+            <edge source="Adapter.AdapterDetector" target="Adapter.AdapterChecker">
+              <point x="0.0" y="-15.0" />
+              <point x="474.5000000000002" y="60.0" />
+              <point x="351.2826143271624" y="60.0" />
+              <point x="49.09090909090912" y="15.0" />
+            </edge>
+            <edge source="Composite.RootCompositeChecker" target="Composite.ClassCompositeChecker">
+              <point x="-66.0" y="-15.0" />
+              <point x="977.7187500000002" y="200.0" />
+              <point x="955.2767051211207" y="200.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="Adapter.RootAdapterChecker" target="Adapter.AdapterChecker">
+              <point x="45.714285714285666" y="-15.0" />
+              <point x="342.796542553192" y="190.0" />
+              <point x="384.5000000000002" y="190.0" />
+              <point x="384.5000000000002" y="80.0" />
+              <point x="326.73715978170776" y="80.0" />
+              <point x="24.545454545454504" y="15.0" />
+            </edge>
+            <edge source="Composite.RootCompositeChecker" target="Composite.CompositeChecker">
+              <point x="66.0" y="-15.0" />
+              <point x="1109.7187500000002" y="200.0" />
+              <point x="1076.7767051211208" y="200.0" />
+              <point x="1076.7767051211208" y="100.0" />
+              <point x="1098.67087190292" y="100.0" />
+              <point x="28.3125" y="15.0" />
+            </edge>
+            <edge source="Adapter.ClassAdapterChecker" target="Adapter.AdapterChecker">
+              <point x="-54.0" y="-15.0" />
+              <point x="27.0" y="60.0" />
+              <point x="240.82806887261688" y="60.0" />
+              <point x="-61.363636363636374" y="15.0" />
+            </edge>
+            <edge source="RunPatternDetectors" target="Singleton.SingletonChecker">
+              <point x="74.53125" y="-15.0" />
+              <point x="1287.5579551211208" y="340.0" />
+              <point x="2067.7913270240406" y="340.0" />
+              <point x="2067.7913270240406" y="90.0" />
+              <point x="1969.67087190292" y="90.0" />
+              <point x="62.5625" y="15.0" />
+            </edge>
+            <edge source="RunPatternDetectors" target="Adapter.AdapterDetector">
+              <point x="-64.59375" y="-15.0" />
+              <point x="1148.4329551211208" y="330.0" />
+              <point x="474.5000000000002" y="330.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.694127957931639" x="755.7575757575758" y="143.6875" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Singleton/ClassSingletonChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="81" column="5" lean-forward="true" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Singleton/PatternChecker.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="0.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Adapter/InterfaceAdapterChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="13" column="76" lean-forward="false" selection-start-line="13" selection-start-column="76" selection-end-line="13" selection-end-column="76" />
+          <folding>
+            <element signature="e#762#763#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Composite/ClassCompositeChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="153" column="55" lean-forward="true" selection-start-line="153" selection-start-column="55" selection-end-line="153" selection-end-column="55" />
+        <state relative-caret-position="374">
+          <caret line="140" column="56" lean-forward="true" selection-start-line="140" selection-start-column="56" selection-end-line="140" selection-end-column="56" />
           <folding>
             <element signature="docComment;method#getClassName#0;class#ClassCompositeChecker#0" expanded="false" />
             <element signature="docComment;method#getRoot#0;class#ClassCompositeChecker#0" expanded="false" />
@@ -914,9 +1189,116 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Composite/RootCompositeChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="37" column="18" lean-forward="true" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+        <state relative-caret-position="132">
+          <caret line="41" column="53" lean-forward="false" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
+          <folding>
+            <element signature="e#1124#1125#0" expanded="true" />
+            <element signature="e#1154#1155#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Composite/CompositeDetector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="72" column="77" lean-forward="true" selection-start-line="72" selection-start-column="77" selection-end-line="72" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RunPatternDetectors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="50" column="33" lean-forward="false" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Decorator/DecoratorChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Decorator/RootDecoratorChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="951">
+          <caret line="75" column="9" lean-forward="true" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Decorator/DecoratorDetector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="36" column="16" lean-forward="true" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Adapter/RootAdapterChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Decorator/ClassDecoratorChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="149" column="13" lean-forward="true" selection-start-line="149" selection-start-column="13" selection-end-line="149" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Adapter/AdapterDetector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="74" column="13" lean-forward="true" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="" y="">RunPatternDetectors</node>
+            <node x="" y="">Composite</node>
+            <node x="" y="">Adapter</node>
+            <node x="" y="">Decorator</node>
+            <node x="" y="">ExtendsConcreteType</node>
+            <node x="" y="">Singleton</node>
+            <node x="" y="">DirExplorer</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="559.0" y="103.5" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Adapter/ClassAdapterChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="64" column="71" lean-forward="false" selection-start-line="64" selection-start-column="71" selection-end-line="64" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
